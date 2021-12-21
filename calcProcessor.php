@@ -11,6 +11,7 @@ if (isset($_POST['operation'])){
     $x=$_POST['num1'];
     $y=$_POST['num2'];
     $operation=$_POST['operation'];
+    //ensuring only numeric characters are typed
     if (is_numeric($x) && is_numeric($y))
     {
         //using the switch case statement to calculate
@@ -28,8 +29,8 @@ if (isset($_POST['operation'])){
             case 'divi':
               $result= $x/$y;
             break;
-        // default :
-        //    echo  "Invalid Operation";
+        default :
+           echo  "Invalid Operation";
          }
 
      }else{
